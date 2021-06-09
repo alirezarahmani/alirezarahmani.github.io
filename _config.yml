@@ -1,6 +1,6 @@
 # main text of home
-name: John Doe
-bio: A Man who travels the world eating noodles
+name: Aliréza Rahmani khalili
+bio: Software engineer, Domain Driven Design Enthusiast
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -16,7 +16,7 @@ resume: true
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://sergiokopplin.github.io/indigo
+url: https://alirezarahmani.me
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
@@ -50,21 +50,15 @@ github: mygithub
 medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: myemail@gmail.com
+email: alirezarahmani@live.com
 
 authors:
-  johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
+    alirezarahmani:
+    name: Aliréza Rahmani khalili
+    bio: Software engineer, Domain Driven Design Enthusiast
     external-image: false
     picture: assets/images/profile.jpg
-    twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+    twitter: alirezarahmani
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
