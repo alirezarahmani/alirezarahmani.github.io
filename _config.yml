@@ -1,6 +1,6 @@
 # main text of home
 name: Aliréza Rahmani khalili
-bio: Software engineer, Domain Driven Design Enthusiast
+bio: Software Engineer, Domain Driven Design Enthusiast
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -35,13 +35,13 @@ disqus:
 
 # if you don't have any of social below, comment the line
 facebook: myfacebook
-twitter: mytwitter
+twitter: alirezarahmani
 # instagram: myinstagram
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: mygithub
+github: alirezarahmani
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
