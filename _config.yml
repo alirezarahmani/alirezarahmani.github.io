@@ -3,7 +3,7 @@ name: Aliréza Rahmani khalili
 bio: Software Engineer, Domain Driven Design Enthusiast
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: A website about Alireza Rahmani khalili
 
 # if it's an external image, update below for true
 # better with square images
@@ -22,7 +22,7 @@ url: https://alirezarahmani.me
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+analytics-google: '275285257'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
