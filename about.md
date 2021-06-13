@@ -4,9 +4,11 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-Alireza is an IT Professional that gets bored doing things in the same old and not optimized ways. This led him into unexplored areas of Domain-Driven Design, algorithm and OOP design. For a significant chunk of his waking hours, He is an experienced Software Engineer, OOP expert. He <3 teaching this stuff, too. As a programmer, get paid mostly to work on PHP projects and sometimes in Elixir and Ruby.
+Alireza is a software craftsman that gets bored doing things in the same old ways. This led him into unexplored areas of Domain-Driven Design, algorithm, and OOP design. Since 2014, He has served as a software engineer, where he has been repeatedly recognized for his knowledge in Domain-Driven Design. also, known for excellent OOP skills, He also excels in merging business and user needs into high-quality, cost-effective design solutions while keeping within budgetary constraints.
 
-Recently, He has been focusing on research and write about algorithm design optimizations and pitfalls in programming and misconception in OO. Prefer a total approach: Algorithms, DDD, Software Design, Elixir, Ruby, High-level Strategy, Architecture. Graduated at Masters degree in Computer Science of Shahid Beheshti Tehran University.
+Recently, He has been focusing on research and write about optimizations and pitfalls in programming and misconception in OO. Prefer a total approach: Domain-Driven Design, Software Design, CQRS, High-level Strategy, Architecture. Graduated with a master's degree in Computer Science from Shahid Beheshti Tehran University.
+
+Sincerely,
 <h2>Skills</h2>
 
 <ul class="skill-list">
