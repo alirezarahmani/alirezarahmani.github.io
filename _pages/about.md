@@ -2,7 +2,7 @@
 layout: about
 title: About Me
 permalink: /
-subtitle: Senior Software Engineer.
+subtitle: Senior Software Engineer, Domain driven Design Practitioner
 
 profile:
   align: right
