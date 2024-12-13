@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info:
+  more_info: ""
 
 news: false # includes a list of news items
 nav: false
@@ -31,9 +31,6 @@ From DDD workshops to the intricacies of microservices, I don't shy away from pu
 
 🛠️ Tech Maestro:
 My toolkit is diverse, spanning PHP 8.2, Symfony 6, Laravel, and more. I thrive on challenges, leveraging my proficiency to handle the demands of any project. With a focus on DDD, I architect systems that not only meet technical requirements but also align with your business strategy.
-
-🏆 Proven Achievements:
-In my recent role at PEPData in Lisbon, I led the redesign of an anti-money laundering solution, applying DDD principles to enhance system performance. At WorkSome in KBH, I designed and implemented a Vendor Management System, demonstrating a commitment to DDD and refining product definitions.
 
 📚 Knowledge Sharer:
 As a regular speaker at conferences like Iran DDD and a contributor to Dzone, Tuts+, and SitePoint, I actively share insights and stay at the forefront of software engineering trends. My goal is not just to keep up but to contribute to the evolution of our field.
