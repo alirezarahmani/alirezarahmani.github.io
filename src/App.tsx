@@ -258,6 +258,30 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-white">Featured Author</h2>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+              <a href="https://dzone.com/authors/alirezarahmani" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-4 group">
+                <div className="bg-white rounded-xl p-4 group-hover:scale-105 transition-transform duration-300">
+                  <svg width="80" height="80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" fill="#FF6B35"/>
+                    <path d="M40 60h120v20H40zm0 40h120v20H40zm0 40h80v20H40z" fill="white"/>
+                    <circle cx="150" cy="140" r="15" fill="white"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">DZone Author</h3>
+                  <p className="text-blue-200">Technical articles on AI, Backend Architecture, and Modern Development</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
+        <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">Let's Build Something Amazing</h2>
             <p className="text-xl mb-12 text-blue-100">
