@@ -65,10 +65,10 @@ function App() {
 
   const publications = [
     {
-      title: 'Domain-Driven Design in Modern Backend Systems',
+      title: 'Demystifying Event Storming: A Comprehensive Guide to Understanding Complex Systems (Part 1)',
       platform: 'DZone',
-      description: 'Comprehensive guide on implementing DDD principles in large-scale applications.',
-      link: '#'
+      description: 'This guide is your roadmap to mastering Event Storming for architects, analysts, and curious minds, offering insights into unraveling the secrets of complex systems.',
+      link: 'https://dzone.com/articles/demystifying-event-storming-a-comprehensive-guide'
     },
     {
       title: 'AI Integration Patterns for Real Estate Technology',
