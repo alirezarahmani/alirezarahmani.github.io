@@ -1,0 +1,46 @@
+# Jekyll Configuration for alirezarahmani.com
+title: "Alireza Rahmani Khalili - Principal Software Engineer"
+description: "Principal Software Engineer specializing in AI, LLMs, backend architecture, and Domain-Driven Design. Research-driven developer with 10+ years experience."
+url: "https://alirezarahmani.com"
+baseurl: ""
+
+# Author information
+author:
+  name: "Alireza Rahmani Khalili"
+  email: "alireza@alirezarahmani.com"
+  linkedin: "https://linkedin.com/in/alirezarahmani"
+  github: "https://github.com/alirezarahmani"
+
+# SEO and Analytics
+google_analytics: "G-XXXXXXXXXX" # Replace with your Google Analytics ID
+google_site_verification: "your-verification-code" # Replace with your verification code
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: UTC
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# SEO Plugin settings
+seo:
+  type: Person
+  name: "Alireza Rahmani Khalili"
+  links:
+    - "https://linkedin.com/in/alirezarahmani"
+    - "https://github.com/alirezarahmani"
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
