@@ -292,7 +292,7 @@ function App() {
                 <Mail className="w-5 h-5" />
                 <span>alireza@alirezarahmani.com</span>
               </a>
-              <a href="https://linkedin.com/in/alirezarahmani" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-all duration-300">
+              <a href="https://www.linkedin.com/in/rahmanikhalili/" className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full transition-all duration-300">
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
               </a>
