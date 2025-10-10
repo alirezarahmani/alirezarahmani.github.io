@@ -6,6 +6,10 @@ on:
     branches:
       - main # Or your default branch
 
+# Add this permissions block
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -13,24 +17,22 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          # If you are using pnpm, uncomment the following lines
-          # cache: 'pnpm'
-
-      # If you are using pnpm, install it
-      # - name: Install pnpm
-      #   uses: pnpm/action-setup@v2
-      #   with:
-      #     version: 8
+          cache: 'pnpm'
 
       - name: Install Dependencies
-        run: npm install # or pnpm install or yarn install
+        run: pnpm install
 
       - name: Build 🏗️
-        run: npm run build # or pnpm build or yarn build
+        run: pnpm build
 
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
