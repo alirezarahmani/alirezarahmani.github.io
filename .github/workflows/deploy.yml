@@ -1,27 +1,45 @@
-name: Deploy (pnpm + Vite → Pages)
+# .github/workflows/deploy.yml
+name: Deploy (Next.js export + pnpm → GitHub Pages)
+
 on:
   push:
     branches: [ main ]
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'pnpm'
-      - run: corepack enable
-      - uses: pnpm/action-setup@v4
-        with: { version: 9 }
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run build   # خروجی dist/
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: ./dist }
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build (export)
+        run: pnpm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
