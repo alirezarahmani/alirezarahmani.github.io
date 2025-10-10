@@ -1,16 +1,15 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { siteData } from '@/lib/data'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { siteData } from '@/lib/data'
 
 const roles = [
   'AI Architect',
-  'Principal Software Engineer',
-  'DDD/BDD Writer',
-  'DevOps Coach',
+  'Full-Stack Developer',
+  'Cloud Solutions Expert',
+  'Tech Innovator',
 ]
 
 export default function Hero() {
@@ -25,6 +24,7 @@ export default function Hero() {
 
   return (
     <section
+      id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage:
@@ -61,6 +61,21 @@ export default function Hero() {
                 >
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                   <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a
+                href={siteData.social.substack}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light hover:opacity-80 transition-opacity"
+                aria-label="Substack"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
                 </svg>
               </a>
               <a
@@ -107,15 +122,14 @@ export default function Hero() {
 
             {/* Role Display */}
             <div className="mb-8">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-accent mb-2">
-                I&apos;m a{' '}
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2">
                 <motion.span
                   key={currentRole}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="text-accent"
+                  className="text-[#3093d6]"
                 >
                   {roles[currentRole]}
                 </motion.span>
@@ -129,18 +143,18 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <Link
+              <a
                 href="#contact"
-                className="px-8 py-3 bg-accent text-navy font-semibold rounded-full hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-3 border-2 border-light/30 text-light font-semibold rounded-full hover:border-accent hover:text-accent transition-all duration-300"
               >
                 Get In Touch
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#case-studies"
                 className="px-8 py-3 border-2 border-light/30 text-light font-semibold rounded-full hover:border-accent hover:text-accent transition-all duration-300"
               >
                 View My Work
-              </Link>
+              </a>
             </div>
           </motion.div>
 
@@ -152,7 +166,7 @@ export default function Hero() {
             className="relative flex justify-center md:justify-end"
           >
             <div className="relative">
-              {/* Animated background circles */}
+              {/* Animated background circles - reduced opacity */}
               <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
@@ -165,15 +179,15 @@ export default function Hero() {
                 }}
                 className="absolute inset-0 -z-10"
               >
-                <div className="absolute top-0 right-0 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
+                <div className="absolute top-0 right-0 w-72 h-72 bg-accent/30 rounded-full blur-3xl opacity-30" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/30 rounded-full blur-3xl opacity-30" />
               </motion.div>
 
               {/* Portrait container with modern styling */}
               <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px]">
-                {/* Decorative border */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent via-blue-400 to-blue-600 p-1 animate-pulse">
-                  <div className="w-full h-full rounded-full bg-navy/50 backdrop-blur-sm" />
+                {/* Decorative border - reduced opacity */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 via-blue-400/20 to-blue-600/20 p-1 animate-pulse">
+                  <div className="w-full h-full rounded-full bg-navy/30 backdrop-blur-sm" />
                 </div>
 
                 {/* Portrait image */}
@@ -187,7 +201,7 @@ export default function Hero() {
                   />
                 </div>
 
-                {/* Floating accent elements */}
+                {/* Floating accent elements - reduced opacity */}
                 <motion.div
                   animate={{ y: [0, -20, 0] }}
                   transition={{
@@ -195,7 +209,7 @@ export default function Hero() {
                     repeat: Infinity,
                     ease: 'easeInOut',
                   }}
-                  className="absolute -top-4 -right-4 w-20 h-20 bg-accent/30 rounded-full blur-xl"
+                  className="absolute -top-4 -right-4 w-20 h-20 bg-accent/30 rounded-full blur-xl opacity-30"
                 />
                 <motion.div
                   animate={{ y: [0, 20, 0] }}
@@ -204,7 +218,7 @@ export default function Hero() {
                     repeat: Infinity,
                     ease: 'easeInOut',
                   }}
-                  className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500/30 rounded-full blur-xl"
+                  className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500/30 rounded-full blur-xl opacity-30"
                 />
               </div>
             </div>

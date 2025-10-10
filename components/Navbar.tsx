@@ -5,37 +5,54 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/#services', label: 'Services' },
-  { href: '/#case-studies', label: 'Case Studies' },
-  { href: '/articles', label: 'Articles' },
-  { href: '/about', label: 'About' },
-  { href: '/#testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/#book-a-call', label: 'Book a Call' },
+  { href: '#home', label: 'Home' },
+  { href: '#services', label: 'Services' },
+  { href: '#case-studies', label: 'Case Studies' },
+  { href: '#articles', label: 'Articles' },
+  { href: '#about', label: 'About' },
+  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#contact', label: 'Contact' },
+  { href: '#book-a-call', label: 'Book a Call' },
 ]
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToSection = (id: string) => {
+    const element = document.querySelector(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-navy/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        isScrolled 
+          ? 'bg-gradient-to-r from-blue-600/90 via-blue-500/90 to-sky-400/90 backdrop-blur-md shadow-lg' 
+          : 'bg-gradient-to-r from-blue-600/70 via-blue-500/70 to-sky-400/70 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-light hover:text-accent transition-colors">
+          <Link 
+            href="#home" 
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection('#home')
+            }}
+            className="text-xl font-bold text-white hover:text-accent transition-colors"
+          >
             Alireza Rahmani
           </Link>
 
@@ -45,18 +62,22 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-light/80 hover:text-accent transition-colors relative group"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(link.href)
+                }}
+                className="text-sm text-white/90 hover:text-white transition-colors relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-light p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden text-white p-2"
             aria-label="Toggle menu"
           >
             <svg
@@ -68,7 +89,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {isOpen ? (
+              {isMobileMenuOpen ? (
                 <path d="M6 18L18 6M6 6l12 12" />
               ) : (
                 <path d="M4 6h16M4 12h16M4 18h16" />
@@ -79,7 +100,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         <AnimatePresence>
-          {isOpen && (
+          {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
@@ -91,8 +112,11 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-light/80 hover:text-accent transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      scrollToSection(link.href)
+                    }}
+                    className="text-white/90 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>

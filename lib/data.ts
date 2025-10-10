@@ -117,9 +117,10 @@ export const siteData = {
     success: "Thanks — I'll get back to you soon."
   },
   social: {
-    linkedin: "https://linkedin.com/in/your-handle",
-    github: "https://github.com/your-handle",
-    youtube: "https://youtube.com/@your-handle"
+    linkedin: "https://linkedin.com/in/your-profile",
+    substack: "https://yourname.substack.com",
+    github: "https://github.com/your-username",
+    youtube: "https://youtube.com/@your-channel"
   },
   booking: {
     title: "Book a Discovery Call",
