@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build && next export",
+    "postbuild": "cp -n public/CNAME out/CNAME 2>/dev/null || true; touch out/.nojekyll",
+    "start": "serve out -l 4173"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
