@@ -1,88 +1,110 @@
 
 export const siteData = {
   profile: {
-    name: "Alireza Rahmani",
-    title: "Principal Software Engineer · AI/DDD Practitioner",
-    summary: "Principal Software Engineer focused on AI-assisted systems, MLS-scale data pipelines, and pragmatic DDD. I build reliable Go/Python microservices, vector DB–backed retrieval, and boring deploys that actually ship.",
-    location: "Azerbaijan (remote-friendly)",
-    availability: "Open for consulting, architecture, and advisory."
+    name: "Alireza Rahmani Khalili",
+    title: "Full Stack Developer & AI Specialist",
+    summary: "Passionate about building scalable applications and leveraging AI to solve complex problems.",
+    bio: "With years of experience in software development, I specialize in creating innovative solutions that drive business growth.",
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "AI/ML",
+      "Cloud Architecture",
+      "DevOps"
+    ]
   },
   services: [
     {
-      slug: "cloud-solution-architecture",
-      title: "Cloud Solution Architecture",
-      desc: "Design scalable, secure cloud foundations with CI/CD, observability, and cost-aware patterns. Uptime steady, deploys boring."
+      slug: "web-development",
+      title: "Web Development",
+      desc: "Building modern, responsive web applications using cutting-edge technologies."
     },
     {
-      slug: "ai-systems-rag-pipelines",
-      title: "AI Systems & RAG Pipelines",
-      desc: "Embeddings, vector databases, retrieval orchestration, evaluation, and guardrails. From prototype to measurable impact."
+      slug: "ai-integration",
+      title: "AI Integration",
+      desc: "Implementing AI solutions to enhance business processes and user experiences."
     },
     {
-      slug: "engineering-management",
-      title: "Engineering Management",
-      desc: "Team rituals that work, hiring loops, technical strategy, and delivery cadence based on data not vibes."
+      slug: "cloud-solutions",
+      title: "Cloud Solutions",
+      desc: "Designing and deploying scalable cloud infrastructure for your applications."
     },
     {
-      slug: "devops-enablement",
-      title: "DevOps Enablement",
-      desc: "Infra-as-code, Kubernetes, resilient releases, incident hygiene, and postmortems people actually read."
+      slug: "consulting",
+      title: "Consulting",
+      desc: "Strategic technology consulting to help your business grow and innovate."
     },
     {
-      slug: "content-speaking",
-      title: "Content & Speaking",
-      desc: "Talks and deep-dive articles on DDD/BDD heuristics and AI-in-the-trenches engineering."
+      slug: "api-development",
+      title: "API Development",
+      desc: "Creating robust and scalable APIs for seamless system integration."
     },
     {
-      slug: "career-coaching",
-      title: "Career Coaching",
-      desc: "Positioning, portfolios, interview prep, and negotiation for senior engineers and leads."
+      slug: "devops",
+      title: "DevOps",
+      desc: "Streamlining development workflows with modern DevOps practices."
     }
   ],
-  case_studies: [
+  caseStudies: [
     {
-      slug: "roomvu-mls-platform",
-      title: "Roomvu MLS Platform: Reliable Listing Sync at Scale",
-      stack: ["Symfony/Laravel", "Kubernetes", "Go", "PostgreSQL", "RabbitMQ"],
-      problem: "Fragmented MLS providers, inconsistent data, high change-rate, missing images.",
-      approach: "Provider-normalization, resilient fetchers in Go, idempotent upserts, and performance-first pipelines.",
-      outcome: "System became fully reliable, millions of listings synced with measurable latency and fewer defects.",
+      slug: "e-commerce-platform",
+      title: "E-Commerce Platform",
+      description: "Built a scalable e-commerce solution handling 10k+ daily transactions.",
+      technologies: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
+      problem: "Built a scalable e-commerce solution handling 10k+ daily transactions.",
+      approach: "",
+      outcome: "",
       link: "#"
     },
     {
-      slug: "nidly-ai-marketing",
-      title: "Nidly: AI-Driven Real-Estate Marketing SaaS",
-      stack: ["Next.js", "FastAPI", "OpenAI", "pgvector", "Cloudflare"],
-      problem: "Agents need automated listing videos, overlays, and scheduling with search/analytics.",
-      approach: "Microservices in Go/Python, vector search across listings/news, AI content generation, calendar scheduling.",
-      outcome: "Pilot-ready platform with clear plan for $9/$19/$49 tiers.",
+      slug: "ai-powered-analytics",
+      title: "AI-Powered Analytics",
+      description: "Developed an AI-driven analytics dashboard for business intelligence.",
+      technologies: ["Python", "TensorFlow", "React", "FastAPI"],
+      problem: "Developed an AI-driven analytics dashboard for business intelligence.",
+      approach: "",
+      outcome: "",
       link: "#"
     },
     {
-      slug: "news-ingestion-vector",
-      title: "Vector News Ingestion & RAG",
-      stack: ["Firecrawl", "SentenceTransformers", "pgvector", "FastAPI"],
-      problem: "Real-estate intel scattered across sites; manual curation slow.",
-      approach: "Scheduled crawling, metadata enrichment, embeddings, and retrieval APIs for downstream apps.",
-      outcome: "Sub-2s query returns with high-signal summaries for agents and analysts.",
+      slug: "mobile-app-backend",
+      title: "Mobile App Backend",
+      description: "Created a robust backend infrastructure for a mobile application.",
+      technologies: ["Node.js", "MongoDB", "Redis", "Docker"],
+      problem: "Created a robust backend infrastructure for a mobile application.",
+      approach: "",
+      outcome: "",
+      link: "#"
+    },
+    {
+      slug: "real-time-chat-system",
+      title: "Real-time Chat System",
+      description: "Implemented a real-time messaging system with WebSocket technology.",
+      technologies: ["Socket.io", "React", "Express", "Redis"],
+      problem: "Implemented a real-time messaging system with WebSocket technology.",
+      approach: "",
+      outcome: "",
       link: "#"
     }
   ],
   articles: [
     {
-      title: "Beyond Principles: Embracing Heuristics in DDD for Practical Solutions",
-      source: "DZone",
-      link: "#"
+      title: "Building Scalable Applications",
+      source: "Your Blog",
+      link: "https://your-blog.com/article-1"
     },
     {
-      title: "Behind the Feed: Engineering Real Estate Listings the Right Way",
-      source: "DZone",
-      link: "#"
+      title: "AI in Modern Development",
+      source: "Your Blog",
+      link: "https://your-blog.com/article-2"
     },
     {
-      title: "From Listings to Leads: Engineering Real-Estate AI Agents with MCP",
-      source: "Draft",
-      link: "#"
+      title: "Cloud Architecture Patterns",
+      source: "Your Blog",
+      link: "https://your-blog.com/article-3"
     }
   ],
   about: {
@@ -96,40 +118,83 @@ export const siteData = {
   },
   testimonials: [
     {
-      quote: "Alireza took a chaotic codebase and gave us reliable releases. We stopped firefighting.",
-      author: "N. Farzad",
-      role: "CTO, PropTech startup"
+      quote: "Exceptional work! Delivered beyond expectations.",
+      author: "John Doe",
+      role: "CEO, Tech Company"
     },
     {
-      quote: "Clear thinking, fast iterations, and honest trade-offs. Exactly what we needed.",
-      author: "S. Momeni",
-      role: "Head of Product"
+      quote: "Professional, efficient, and highly skilled developer.",
+      author: "Jane Smith",
+      role: "Product Manager"
     },
     {
-      quote: "His AI architecture saved us weeks per quarter. Practical, measurable results.",
-      author: "R. Jalili",
-      role: "Engineering Manager"
+      quote: "Great communication and technical expertise.",
+      author: "Mike Johnson",
+      role: "CTO, Startup"
+    }
+  ],
+  experience: [
+    {
+      title: "Senior Full Stack Developer",
+      company: "Tech Company",
+      period: "2020 - Present"
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Digital Agency",
+      period: "2018 - 2020"
+    },
+    {
+      title: "Software Engineer",
+      company: "Startup Inc",
+      period: "2016 - 2018"
     }
   ],
   contact: {
     intro: "Need help with architecture, AI enablement, or a talk for your team? Send a note and I'll reply soon.",
     fields: ["Name", "Work email", "Company (optional)", "Message", "Consent checkbox"],
-    success: "Thanks — I'll get back to you soon."
+    success: "Thanks — I'll get back to you soon.",
+    email: "your.email@example.com",
+    location: "Your City, Country"
   },
   social: {
     linkedin: "https://linkedin.com/in/your-profile",
-    substack: "https://yourname.substack.com",
-    github: "https://github.com/your-username",
+    substack: "https://your-substack.substack.com",
+    github: "https://github.com/your-profile",
     youtube: "https://youtube.com/@your-channel"
   },
+  socialLinks: [
+    {
+      name: "LinkedIn",
+      url: "https://linkedin.com/in/your-profile",
+      icon: "💼"
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/your-profile",
+      icon: "🐙"
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/your-profile",
+      icon: "🐦"
+    }
+  ],
   booking: {
     title: "Book a Discovery Call",
     desc: "Choose a time that works. We'll map goals, constraints, and the fastest responsible path.",
-    calendly_iframe: "https://calendly.com/your-link/30min"
+    calendly_iframe: "https://calendly.com/your-link"
   }
 }
 
 export type Service = typeof siteData.services[0]
-export type CaseStudy = typeof siteData.case_studies[0]
+export type CaseStudy = typeof siteData.caseStudies[0]
 export type Article = typeof siteData.articles[0]
 export type Testimonial = typeof siteData.testimonials[0]
+
+export const roles = [
+  "Full Stack Developer",
+  "AI Specialist",
+  "Cloud Architect",
+  "Technical Consultant"
+]
