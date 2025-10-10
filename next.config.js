@@ -1,11 +1,12 @@
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  basePath: '/alirezarahmani.github.io',
-  images: {
-    unoptimized: true,
-  },
-}
+const isProjectPage = true;
+const repoBase = '/alirezarahmani.github.io';
 
-module.exports = nextConfig
+module.exports = {
+  output: 'export', 
+  images: { unoptimized: true },
+  ...(isProjectPage && {
+    basePath: repoBase,
+    assetPrefix: repoBase + '/'
+  })
+};
