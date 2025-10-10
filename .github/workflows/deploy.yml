@@ -1,44 +1,25 @@
-
-name: Deploy to GitHub Pages
-
+# .github/workflows/deploy.yml
+name: Deploy to Pages
 on:
   push:
-    branches:
-      - main # Or your default branch
-
-# Add this permissions block
+    branches: [ main ]
 permissions:
-  contents: write
-
+  contents: read
+  pages: write
+  id-token: write
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'pnpm'
-
-      - name: Install Dependencies
-        run: pnpm install
-
-      - name: Build 🏗️
-        run: pnpm build
-
-      - name: Add .nojekyll file
-        run: touch ./out/.nojekyll
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: out # The folder the action should deploy.
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: './out' }  # یا ./dist یا ./docs
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4
