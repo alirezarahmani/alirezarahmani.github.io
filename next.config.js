@@ -1,8 +1,10 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/alirezarahmani.github.io',
   images: {
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
 }
 
