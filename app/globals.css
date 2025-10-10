@@ -1,0 +1,22 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    border-color: theme('colors.border');
+  }
+
+  body {
+    @apply bg-navy text-light antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
