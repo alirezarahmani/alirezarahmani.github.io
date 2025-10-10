@@ -1,16 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { siteData } from '@/lib/data'
-
-const roles = [
-  'AI Architect',
-  'Full-Stack Developer',
-  'Cloud Solutions Expert',
-  'Tech Innovator',
-]
+import {roles, siteData} from '@/lib/data'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   const [currentRole, setCurrentRole] = useState(0)
@@ -78,40 +71,55 @@ export default function Hero() {
                   <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
                 </svg>
               </a>
+              {/*<a*/}
+              {/*  href={siteData.social.github}*/}
+              {/*  target="_blank"*/}
+              {/*  rel="noopener noreferrer"*/}
+              {/*  className="text-light hover:opacity-80 transition-opacity"*/}
+              {/*  aria-label="GitHub"*/}
+              {/*>*/}
+              {/*  <svg*/}
+              {/*    className="w-6 h-6"*/}
+              {/*    fill="none"*/}
+              {/*    stroke="currentColor"*/}
+              {/*    strokeWidth="2"*/}
+              {/*    viewBox="0 0 24 24"*/}
+              {/*  >*/}
+              {/*    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />*/}
+              {/*  </svg>*/}
+              {/*</a>*/}
+              {/*<a*/}
+              {/*  href={siteData.social.youtube}*/}
+              {/*  target="_blank"*/}
+              {/*  rel="noopener noreferrer"*/}
+              {/*  className="text-light hover:opacity-80 transition-opacity"*/}
+              {/*  aria-label="YouTube"*/}
+              {/*>*/}
+              {/*  <svg*/}
+              {/*    className="w-6 h-6"*/}
+              {/*    fill="none"*/}
+              {/*    stroke="currentColor"*/}
+              {/*    strokeWidth="2"*/}
+              {/*    viewBox="0 0 24 24"*/}
+              {/*  >*/}
+              {/*    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z" />*/}
+              {/*    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />*/}
+              {/*  </svg>*/}
+              {/*</a>*/}
               <a
-                href={siteData.social.github}
+                href={siteData.social.symfony}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-light hover:opacity-80 transition-opacity"
-                aria-label="GitHub"
+                aria-label="Symfony Certification"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                </svg>
-              </a>
-              <a
-                href={siteData.social.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-light hover:opacity-80 transition-opacity"
-                aria-label="YouTube"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z" />
-                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-                </svg>
+                  <Image
+                      src="/symfony-svgrepo-com.svg"
+                      alt="Symfony Certification"
+                      width={24}
+                      height={24}
+                      className="w-7 h-7"
+                  />
               </a>
             </div>
 

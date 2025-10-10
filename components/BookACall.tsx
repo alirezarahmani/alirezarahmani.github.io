@@ -16,13 +16,13 @@ export default function BookACall() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-light mb-4">
-            Book a Call
+            {siteData.booking.title}
           </h2>
           <p className="text-light/70 text-lg mb-8">
-            Schedule a consultation to discuss your project
+            {siteData.booking.desc}
           </p>
           <a
-            href={siteData.calendly || 'https://calendly.com'}
+            href={siteData.calendly}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-accent text-navy font-semibold py-4 px-8 rounded-lg hover:bg-accent/80 transition-colors"

@@ -10,7 +10,7 @@ const navLinks = [
   { href: '#case-studies', label: 'Case Studies' },
   { href: '#articles', label: 'Articles' },
   { href: '#about', label: 'About' },
-  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#certifications', label: 'Certifications' },
   { href: '#contact', label: 'Contact' },
   { href: '#book-a-call', label: 'Book a Call' },
 ]
@@ -53,7 +53,7 @@ export default function Navbar() {
             }}
             className="text-xl font-bold text-white hover:text-accent transition-colors"
           >
-            Alireza Rahmani
+            Alireza Rahmani Khalili
           </Link>
 
           {/* Desktop Navigation */}

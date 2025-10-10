@@ -5,7 +5,7 @@ import { siteData } from '@/lib/data'
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-navy/90 to-navy/80">
+    <section id="services" className="py-20 bg-gradient-to-b from-[#132146] to-navy">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
