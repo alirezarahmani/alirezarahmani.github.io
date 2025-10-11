@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/alireza',  // Replace 'alireza' with your actual repo name
-    assetPrefix: '/alireza/',
+    basePath: '',  // Replace 'alireza' with your actual repo name
+    assetPrefix: '/',
     images: {
         unoptimized: true,
     },
