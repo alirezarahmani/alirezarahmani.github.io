@@ -1,11 +1,8 @@
 
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: 'Alireza Rahmani Khalili - AI Architect & Software Engineer',
@@ -27,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body>
+    <html lang="en">
+      <body className="font-sans">
         <Navbar />
         <main>{children}</main>
         <Footer />
