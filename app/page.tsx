@@ -7,6 +7,7 @@ import About from '@/components/About'
 import Certifications from '@/components/Certifications'
 import Contact from '@/components/Contact'
 import BookACall from '@/components/BookACall'
+import Testimonials from '@/components/Testimonials'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <CaseStudies />
       <Articles />
+      <Testimonials />
       <About />
       <Certifications />
       <Contact />
