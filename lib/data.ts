@@ -191,7 +191,7 @@ export const siteData = {
     location: "Vancouver, BC, Canada"
   },
   social: {
-    linkedin: "https://www.linkedin.com/in/alirezarahmanikhalili/",
+    linkedin: "https://www.linkedin.com/in/rahmanikhalili/",
     substack: "https://nidly.substack.com/",
     github: "https://github.com/alirezarahmani",
     youtube: "https://www.youtube.com/@alirezaRahmanikhalili",
@@ -200,7 +200,7 @@ export const siteData = {
   socialLinks: [
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/alirezarahmanikhalili/",
+      url: "https://www.linkedin.com/in/rahmanikhalili/",
       icon: "💼"
     },
     {
