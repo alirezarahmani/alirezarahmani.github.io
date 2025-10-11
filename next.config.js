@@ -4,6 +4,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    // Ensure trailing slashes for static hosting
+    trailingSlash: true,
 }
 
 module.exports = nextConfig
