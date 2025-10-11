@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "postbuild": "cp -n public/CNAME out/CNAME 2>/dev/null || true; touch out/.nojekyll",
-    "start": "serve out -l 4173"
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
@@ -21,6 +21,8 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "eslint": "^9.37.0",
+    "eslint-config-next": "^15.5.4",
   }
 }
