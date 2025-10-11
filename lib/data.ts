@@ -195,7 +195,7 @@ export const siteData = {
     substack: "https://nidly.substack.com/",
     github: "https://github.com/alirezarahmani",
     youtube: "https://www.youtube.com/@alirezaRahmanikhalili",
-    symfony: "https://connect.symfony.com/profile/alirezarahmani"
+    symfony: "https://connect.symfony.com/profile/alireza_rahmani"
   },
   socialLinks: [
     {
