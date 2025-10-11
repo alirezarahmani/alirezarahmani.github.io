@@ -192,7 +192,7 @@ export const siteData = {
   },
   social: {
     linkedin: "https://www.linkedin.com/in/alirezarahmanikhalili/",
-    substack: "https://alirezarahmani.substack.com/",
+    substack: "https://nidly.substack.com/",
     github: "https://github.com/alirezarahmani",
     youtube: "https://www.youtube.com/@alirezaRahmanikhalili",
     symfony: "https://connect.symfony.com/profile/alirezarahmani"
