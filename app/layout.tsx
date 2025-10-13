@@ -1,21 +1,14 @@
 
-import type { Metadata } from 'next'
+import { siteData } from '@/lib/data'
+import Script from 'next/script'
+import { Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
-export const metadata: Metadata = {
-  title: 'Alireza Rahmani Khalili - AI Architect & Software Engineer',
-  description:
-    'Portfolio of Alireza Rahmani Khalili, an expert AI Architect and Principal Software Engineer specializing in modern web technologies and cloud solutions.',
-  authors: [{ name: 'Alireza Rahmani Khalili' }],
-  keywords: 'Alireza Rahmani Khalili, علیرضا رحمانی خلیلی, Alireza Rahmani, علیرضا رحمانی, Principal Software Engineer, AI Architect, مهندس هوش مصنوعی, معمار سیستم‌های نرم‌افزاری',
-  openGraph: {
-    siteName: 'Alireza Rahmani Khalili - Portfolio',
-  },
-  twitter: {
-    creator: '@AlirezaRahmani',
-  },
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata = {
+  title: 'Alireza Rahmani Khalili - Principal Software Engineer & AI Architect',
+  description: siteData.profile.summary,
 }
 
 export default function RootLayout({
@@ -24,11 +17,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="font-sans">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-P26T0DRKQB`}
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-P26T0DRKQB');
+          `}
+        </Script>
+      </head>
+      <body
+        className={`${inter.className} bg-navy text-light antialiased selection:bg-accent selection:text-navy`}
+      >
+        {children}
       </body>
     </html>
   )
