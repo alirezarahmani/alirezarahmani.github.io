@@ -1,1 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
+<url>
+  <loc>https://nidly.substack.com/</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/archive</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/about</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/beyond-cosine-how-ai-models-really</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/cosine-similarity-meets-ivfflat-practical</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/rag-explained-engineering-scalable</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/part-ii-aggregates-in-action-how</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/what-are-embeddings-and-vectors-ai</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/part-i-understanding-aggregates-in</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/what-is-tokenization-in-ai-how-it</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/domain-driven-design-in-the-ai-era</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/what-is-faiss-building-your-own-zillow</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/part-ii-inside-the-mcp-architecture</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/from-listings-to-leads-engineering</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/rag-explained-engineering-scalable/comments</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nidly.substack.com/p/part-i-understanding-aggregates-in/comments</loc>
+  <lastmod>2025-11-15T12:40:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
