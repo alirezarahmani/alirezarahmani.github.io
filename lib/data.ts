@@ -204,8 +204,8 @@ export const siteData = {
     intro:
       "If your system is slowing down, scaling poorly, or producing unreliable results — I can help fix it.",
     success: "Thanks! I'll get back to you soon.",
-    email: "alirezarahmani@example.com",
-    location: "Vancouver, BC, Canada",
+    email: "alireza@alireza.engineer",
+    location: "Dubai, UAE | Remote (EU Timezone Friendly)",
   },
 
   social: {
