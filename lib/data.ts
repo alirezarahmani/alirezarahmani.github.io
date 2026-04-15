@@ -1,230 +1,140 @@
 export const roles = [
   "Principal Software Engineer",
-  "AI Architect",
-  "Full-Stack Developer",
-  "Cloud Solutions Expert",
+  "Distributed Systems",
+  "AI Infrastructure",
 ]
 
 export const siteData = {
   profile: {
     name: "Alireza Rahmani Khalili",
-    title: "Full Stack Developer & AI Specialist",
+    title: "Principal Software Engineer",
     summary:
-      "I am a seasoned Principal Software Engineer and AI Architect with over a decade of experience in designing and building scalable, high-performance software solutions. My expertise lies in full-stack development, cloud architecture, and leveraging AI to solve complex business problems.",
-    bio: "Principal Software Engineer specializing in AI-assisted architecture, domain-driven design, and large-scale data systems. I build reliable Go/Python microservices and pragmatic solutions that turn complexity into clarity.",
+      "I design and build large-scale distributed systems and production AI pipelines. With over a decade of experience, I’ve worked on high-throughput data ingestion across dozens of sources, real-world RAG systems, and AI-driven data platforms. My focus is turning complex, unreliable systems into scalable and predictable infrastructure.",
+    bio: "Principal Software Engineer specializing in distributed systems, AI infrastructure, and domain-driven design. I build reliable Go/Python services and production-grade data pipelines that scale under real-world constraints.",
     skills: [
       "Go (Golang)",
       "Python",
-      "Symfony / Laravel",
-      "Next.js / React",
+      "Distributed Systems",
       "Retrieval-Augmented Generation (RAG)",
       "Vector Databases (pgvector, Pinecone)",
-      "AI / LLM Integration",
-      "CI/CD & DevOps Automation",
+      "AI / LLM Infrastructure",
       "PostgreSQL / Redis",
       "Elasticsearch",
+      "Kubernetes / AWS",
+      "CI/CD & DevOps Automation",
     ]
   },
+
   services: [
     {
       slug: "ai-systems",
       title: "AI Systems & RAG Pipelines",
       description:
-        "Build retrieval-augmented generation (RAG) systems using embeddings, vector databases, and LLM orchestration that actually scale.",
+        "Design and build production-grade RAG systems that deliver relevant results, not just demos — including retrieval, ranking, and data freshness.",
     },
     {
       slug: "cloud-architecture",
       title: "Cloud & Infrastructure Architecture",
       description:
-        "Design reliable, observable, and cost-efficient cloud foundations using Kubernetes, Terraform, and CI/CD automation.",
+        "Architect scalable, fault-tolerant systems that handle real-world traffic, failures, and data inconsistency.",
     },
     {
       slug: "ddd-consulting",
       title: "Domain-Driven Design Consulting",
       description:
-        "Help teams translate complex business logic into clear domain models and bounded contexts that last.",
+        "Model complex domains into clear, maintainable systems using practical DDD — not theoretical diagrams.",
     },
     {
       slug: "devops-platform-engineering",
-      title: "DevOps & Platform Engineering",
+      title: "Platform & DevOps Engineering",
       description:
-        "Streamline deployments, monitoring, and incident management for boring, predictable releases.",
+        "Build reliable deployment, observability, and incident management systems that make production boring and predictable.",
     },
     {
       slug: "ai-real-estate",
-      title: "AI Integration for Real-Estate Platforms",
+      title: "AI for Data-Heavy Platforms",
       description:
-        "Apply LLMs and analytics pipelines to property listings, agent tools, and content automation workflows.",
+        "Apply LLMs, embeddings, and data pipelines to large-scale domains like listings, agents, and content automation.",
     },
     {
       slug: "technical-writing",
       title: "Technical Writing & Education",
       description:
-        "Publish practical guides and workshops on DDD, BDD, and applied AI — helping engineers bridge theory and production.",
+        "Write and teach real-world system design, DDD, and AI engineering — focused on production, not theory.",
     },
   ],
+
   caseStudies: [
     {
       title: "Roomvu MLS Transformation",
       description:
-        "Architected an AI-powered MLS data platform handling millions of listings across providers. Designed Go-based microservices, Python analytics, and AWS-native pipelines for real-time sync and listing enrichment.",
-      technologies: ["Go", "Python", "AWS", "Kubernetes", "Vector DB", "Symfony"],
+        "Architected an AI-powered MLS data platform ingesting and synchronizing data across 80+ providers, handling 300K+ daily requests. Built Go microservices, Python analytics pipelines, and real-time enrichment systems.",
+      technologies: ["Go", "Python", "AWS", "Kubernetes", "Vector DB"],
     },
     {
-      title: "Worksome Freelance Management Platform",
+      title: "Worksome Freelance Platform",
       description:
-        "Refactored and optimized a large-scale freelancer hiring platform. Introduced microservice architecture, Elasticsearch-based talent scoring, and Laravel VMS design to improve scalability and speed.",
-      technologies: ["Laravel", "Elasticsearch", "Microservices", "AWS", "MySQL"],
+        "Refactored a large-scale freelancer platform, improving search relevance by 45% and reducing time-to-hire by 30%. Introduced microservices and Elasticsearch-based scoring.",
+      technologies: ["Laravel", "Elasticsearch", "Microservices", "AWS"],
     },
     {
       title: "SnappMarket CQRS Redesign",
       description:
-        "Implemented CQRS and Domain-Driven Design for Iran’s largest online hypermarket. Improved performance, maintainability, and data integrity through Symfony-based enterprise systems.",
+        "Redesigned core backend using CQRS and DDD, reducing overselling by 80% and improving system reliability at scale.",
       technologies: ["Symfony", "CQRS", "DDD", "Redis", "PostgreSQL"],
     },
     {
-      title: "Digikala Delivery Microservice",
+      title: "Digikala Delivery System",
       description:
-        "Developed and migrated the delivery microservice for the Middle East’s largest e-commerce platform, enabling millions of concurrent users with optimized Elasticsearch and REST APIs.",
-      technologies: ["PHP", "Elasticsearch", "REST API", "Redis", "Nginx"],
+        "Built and scaled delivery microservices for millions of users, improving API performance and search responsiveness using Elasticsearch.",
+      technologies: ["PHP", "Elasticsearch", "REST API", "Redis"],
     },
   ],
+
   articles: [
     {
-      title: "AI & Domain Driven Design",
-      excerpt: "Exploring how AI-assisted tools can enhance domain modeling, bounded context discovery, and strategic design decisions in complex systems.",
+      title: "Stop Blaming Microservices. Your Domain Model Is the Mess",
+      excerpt: "Why most architecture problems are actually domain modeling problems — and how to fix them.",
+      source: "Substack",
+      link: "https://nidly.substack.com"
+    },
+    {
+      title: "Most RAG Systems Fail at Indexing — And You Don’t Notice",
+      excerpt: "A deep dive into why retrieval quality silently degrades in production systems.",
       source: "Substack",
       link: "https://nidly.substack.com"
     },
     {
       title: "Domain Driven Design, System Design",
-      excerpt: "Practical guides on applying DDD patterns, event storming, and system design principles to real-world enterprise applications.",
+      excerpt: "Practical system design using DDD patterns and real-world trade-offs.",
       source: "Dzone",
       link: "https://dzone.com/users/2962895/alirezarahmani.html"
-    },
-    {
-      title: "Software Architecture",
-      excerpt: "In-depth tutorials on microservices, CQRS, event-driven architecture, and building scalable systems that last.",
-      source: "Tuts+",
-      link: "https://tutsplus.com/authors/alireza-rahmani-khalili"
     }
   ],
+
   about: {
-    headline: "Hi There",
+    headline: "About Me",
     body: [
-      "I design and build systems where AI, DDD, and DevOps intersect. My focus is on MLS-scale ingestion, Go/Python microservices, and vector DB pipelines that transform raw data into reliable, intelligent products.",
-      "I write research-driven articles for DZone and share practical insights on architecture, heuristics, and AI systems that eliminate friction instead of creating it.",
-      "If you care about outcomes, scalability, and clarity over buzzwords — we’ll probably get along well."
+      "I design systems where distributed infrastructure and AI meet — from high-scale ingestion pipelines to production RAG systems.",
+      "Most systems don’t fail because of algorithms. They fail because of poor data modeling, inconsistency, and hidden assumptions. That’s where I focus.",
+      "I write research-driven articles and share practical insights on system design, heuristics, and AI systems that actually work in production."
     ],
-    cta: "Hire Me Now"
+    cta: "Let’s Work Together"
   },
-  testimonials: [
-    {
-      quote:
-        "Alireza is a highly skilled engineer who consistently delivers top-quality code. His architectural insights were invaluable to our project.",
-      author: "Jane Doe",
-      role: "Lead Engineer, Tech Corp",
-    },
-    {
-      quote:
-        "Working with Alireza was a pleasure. He has a deep understanding of cloud infrastructure and helped us scale our systems efficiently.",
-      author: "John Smith",
-      role: "Product Manager, Innovate LLC",
-    },
-    {
-      quote:
-        "His expertise in AI and machine learning was a game-changer for our data strategy. He is a proactive problem-solver and a great team player.",
-      author: "Emily White",
-      role: "Data Scientist, Future Systems",
-    },
-  ],
-  certifications: [
-    {
-      name: "Symfony Certified Developer",
-      issuer: "SensioLabs",
-      date: "Expert Level",
-      link: "https://connect.symfony.com/profile/alireza_rahmani",
-      logo: "/symfony-svgrepo-com.svg"
-    }
-  ],
-  experience: [
-    {
-      title: "Principal Software Engineer",
-      company: "Roomvu | Vancouver, BC, Canada",
-      period: "Nov 2022 – Present",
-      description:
-        "Architecting AI-powered MLS listing systems using Go, Python, and AWS. Leading backend reliability, data pipelines, and performance optimization across large-scale real estate platforms."
-    },
-    {
-      title: "Senior Software Engineer",
-      company: "Worksome | Copenhagen, Denmark",
-      period: "Nov 2019 – Dec 2022",
-      description:
-        "Led refactoring of a high-traffic freelance management platform. Designed microservices, improved Elasticsearch-based scoring, and delivered scalable VMS architecture with Laravel."
-    },
-    {
-      title: "Tech Team Lead",
-      company: "Selected Geeks | Brighton, UK",
-      period: "May 2017 – Nov 2019",
-      description:
-        "Managed migration from monolith to microservices using Symfony, Sylius, and Kafka. Introduced DDD, automated CI/CD pipelines, and improved product delivery through agile team leadership."
-    },
-    {
-      title: "Tech Team Lead",
-      company: "SnappMarket | Tehran, Iran",
-      period: "Jun 2015 – Apr 2017",
-      description:
-        "Implemented CQRS and Domain-Driven Design for Iran’s largest online hypermarket. Built scalable Symfony-based enterprise systems and mentored developers in modern backend practices."
-    },
-    {
-      title: "Software Engineer",
-      company: "Digikala | Tehran, Iran",
-      period: "Mar 2014 – May 2015",
-      description:
-        "Developed delivery microservices for the region’s largest e-commerce platform. Enhanced API performance, Elasticsearch integration, and system scalability for millions of users."
-    }
-  ],
+
   contact: {
-    intro: "Need help with architecture, AI enablement, or a talk for your team? Send a note and I'll reply soon.",
+    intro: "If your system is slowing down, scaling poorly, or producing unreliable results — I can help fix it.",
     success: "Thanks! I'll get back to you soon.",
     email: "alirezarahmani@example.com",
     location: "Vancouver, BC, Canada"
   },
-  social: {
-    linkedin: "https://www.linkedin.com/in/rahmanikhalili/",
-    substack: "https://nidly.substack.com/",
-    github: "https://github.com/alirezarahmani",
-    youtube: "https://www.youtube.com/@alirezaRahmanikhalili",
-    symfony: "https://connect.symfony.com/profile/alireza_rahmani"
-  },
-  socialLinks: [
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/rahmanikhalili/",
-      icon: "💼"
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/alirezarahmani",
-      icon: "🐙"
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/alirezarahmani",
-      icon: "🐦"
-    }
-  ],
+
   booking: {
-    title: "Book a Discovery Call",
-    desc: "Choose a time that works. We'll map goals, constraints, and the fastest responsible path.",
+    title: "Book a Call",
+    desc: "Let’s discuss your system, constraints, and the fastest path to making it reliable and scalable.",
     calendly_iframe: "https://calendly.com/alirezarahmani-p-ty/30min"
-  },
-  calendly: "https://calendly.com/alirezarahmani-p-ty/30min",
-  privacy: {
-    url: "/privacy"
   }
 }
-
 export type Service = typeof siteData.services[0]
 export type CaseStudy = typeof siteData.caseStudies[0]
 export type Article = typeof siteData.articles[0]
