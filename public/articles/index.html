@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>System Design & AI Engineering Insights | Alireza Rahmani</title>
+  <meta name="description" content="Real-world insights on system design, distributed systems, RAG architecture, and AI infrastructure from building production-scale systems." />
+  
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="system design, distributed systems, RAG architecture, vector database, AI infrastructure, backend engineering, data pipelines" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="System Design & AI Engineering Insights" />
+  <meta property="og:description" content="Real-world lessons from building distributed systems and production AI pipelines." />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "System Design & AI Engineering Insights",
+    "description": "Real-world system design and AI engineering articles",
+    "url": "https://alireza.engineer/articles"
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    #0b0b0c 0%,
+    #132f52 40%,
+    #1f497f 100%
+  );
+color: #eaeaea;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
+
+    .article {
+      margin: 30px 0;
+      padding: 20px;
+      border: 1px solid #222;
+      border-radius: 10px;
+      background: #111;
+    }
+
+    .article h3 {
+      margin: 0 0 10px;
+    }
+
+    .article p {
+      color: #bbb;
+    }
+
+    a {
+      color: #4da3ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: #888;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <h1>System Design & AI Engineering Insights</h1>
+  <p>
+    Real-world lessons from building distributed systems, data pipelines, and production AI systems — not theory, not tutorials.
+  </p>
+
+  <!-- FEATURED -->
+  <h2>Featured Articles</h2>
+
+  <div class="article">
+    <h3>Stop Blaming Microservices. Your Domain Model Is the Mess</h3>
+    <p>Why most architecture problems are actually domain modeling problems — and how they silently break systems at scale.</p>
+    <a href="https://nidly.substack.com" target="_blank">Read Article →</a>
+  </div>
+
+  <div class="article">
+    <h3>Most RAG Systems Fail at Indexing — And You Don’t Notice</h3>
+    <p>The hidden failure behind poor retrieval quality in production AI systems.</p>
+    <a href="https://nidly.substack.com" target="_blank">Read Article →</a>
+  </div>
+
+  <!-- RSS FEED SECTION -->
+  <h2>Latest Articles</h2>
+
+  <div id="rss-feed">
+    <p>Loading articles...</p>
+  </div>
+
+</div>
+
+<script>
+async function loadRSS() {
+  const url = "https://api.rss2json.com/v1/api.json?rss_url=https://nidly.substack.com/feed";
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const container = document.getElementById("rss-feed");
+    container.innerHTML = "";
+
+    data.items.slice(0, 10).forEach(item => {
+      const el = document.createElement("div");
+      el.className = "article";
+
+      el.innerHTML = `
+        <h3>${item.title}</h3>
+        <p>${item.description.substring(0, 160)}...</p>
+        <span class="tag">System Design</span>
+        <span class="tag">AI</span>
+        <br/>
+        <a href="${item.link}" target="_blank">Read Article →</a>
+      `;
+
+      container.appendChild(el);
+    });
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+loadRSS();
+</script>
+
+</body>
+</html>
