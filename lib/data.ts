@@ -12,10 +12,11 @@ export const siteData = {
       "I design and build large-scale distributed systems and production AI pipelines. With over a decade of experience, I’ve worked on high-throughput data ingestion across dozens of sources, real-world RAG systems, and AI-driven data platforms. My focus is turning complex, unreliable systems into scalable and predictable infrastructure.",
     bio: "Principal Software Engineer specializing in distributed systems, AI infrastructure, and domain-driven design. I build reliable Go/Python services and production-grade data pipelines that scale under real-world constraints.",
     skills: [
-      "Go (Golang)",
-      "Python",
+      "Domain Driven Design",
       "Distributed Systems",
       "Retrieval-Augmented Generation (RAG)",
+      "Golang",
+      "Python",
       "Vector Databases (pgvector, Pinecone)",
       "AI / LLM Infrastructure",
       "PostgreSQL / Redis",
@@ -118,7 +119,13 @@ export const siteData = {
       excerpt: "In-depth tutorials on microservices, CQRS, event-driven architecture, and building scalable systems that last.",
       source: "Tuts+",
       link: "https://tutsplus.com/authors/alireza-rahmani-khalili"
-    }
+    },
+    {
+  title: "More Articles",
+  excerpt: "More real-world system design and AI engineering insights — continue to the full archive.",
+  source: "Substack",
+  link: "/articles"
+}
   ],
 
   about: {
