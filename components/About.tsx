@@ -65,7 +65,6 @@ export default function About() {
               <p className="text-white/85 leading-relaxed max-w-prose">
                 Principal Software Engineer specializing in distributed systems, AI infrastructure, and domain-driven design.
 I build reliable Go/Python services and production-grade data pipelines that scale under real-world constraints.
-</p>
 
 <p style={{ opacity: 0.7, fontSize: '0.9em' }}>
 More about me: <a href="/who-is-alireza-rahmani-khalili">Alireza Rahmani Khalili</a></p>
