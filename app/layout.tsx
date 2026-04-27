@@ -7,7 +7,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Alireza Rahmani Khalili - Principal Software Engineer & AI Architect',
+  title: 'Who is Alireza Rahmani Khalili | Principal Software Engineer',
   description: siteData.profile.summary,
 }
 
