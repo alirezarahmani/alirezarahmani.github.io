@@ -67,7 +67,7 @@ export default function About() {
 I build reliable Go/Python services and production-grade data pipelines that scale under real-world constraints.
 </p>
 
-<p style="opacity: 0.7; font-size: 0.9em;">
+<p style={{ opacity: 0.7, fontSize: '0.9em' }}>
 More about me: <a href="/who-is-alireza-rahmani-khalili">Alireza Rahmani Khalili</a></p>
               </p>
             </motion.div>
