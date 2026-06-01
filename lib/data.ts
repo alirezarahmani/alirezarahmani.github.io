@@ -9,7 +9,7 @@ export const siteData = {
     name: "Alireza Rahmani Khalili",
     title: "Principal Software Engineer",
     summary:
-      "I design and build large-scale distributed systems and production AI pipelines. With over a decade of experience, I’ve worked on high-throughput data ingestion across dozens of sources, real-world RAG systems, and AI-driven data platforms. My focus is turning complex, unreliable systems into scalable and predictable infrastructure.",
+      "I design and build large-scale distributed systems, Domain-Driven architectures, and AI-native platforms. With over a decade of experience, I’ve worked on high-throughput data ingestion across dozens of sources, real-world RAG systems, and AI-driven data platforms. My focus is turning complex, unreliable systems into scalable and predictable infrastructure.",
     bio: "Principal Software Engineer specializing in distributed systems, AI infrastructure, and domain-driven design. I build reliable Go/Python services and production-grade data pipelines that scale under real-world constraints.",
     skills: [
       "Domain Driven Design",
