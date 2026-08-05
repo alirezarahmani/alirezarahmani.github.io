@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Software Architecture &amp; AI Systems Consulting — Alireza Rahmani Khalili</title>
+  <meta name="description" content="Software Architecture and AI Systems consulting by Alireza Rahmani Khalili. Architecture reviews, Domain-Driven Design, distributed systems, production RAG, agentic systems, and technical architecture advisory." />
+  <meta name="keywords" content="Software Architecture Consulting, AI Systems Consulting, DDD Consulting, Architecture Review, RAG Architecture, Agentic Systems, Distributed Systems, Domain-Driven Design" />
+  <meta name="author" content="Alireza Rahmani Khalili" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://alireza.engineer/consulting/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alireza.engineer/consulting/" />
+  <meta property="og:title" content="Software Architecture &amp; AI Systems Consulting — Alireza Rahmani Khalili" />
+  <meta property="og:description" content="I help engineering teams reason about complex architecture decisions, expose hidden trade-offs, and design systems that survive production." />
+  <meta property="og:image" content="https://alireza.engineer/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Software Architecture &amp; AI Systems Consulting — Alireza Rahmani Khalili" />
+  <meta name="twitter:description" content="I help engineering teams reason about complex architecture decisions, expose hidden trade-offs, and design systems that survive production." />
+  <meta name="twitter:image" content="https://alireza.engineer/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Software Architecture & AI Systems Consulting",
+    "provider": {
+      "@type": "Person",
+      "name": "Alireza Rahmani Khalili",
+      "url": "https://alireza.engineer/",
+      "sameAs": ["https://www.linkedin.com/in/rahmanikhalili/"]
+    },
+    "url": "https://alireza.engineer/consulting/",
+    "description": "Software Architecture and AI Systems consulting covering architecture reviews, Domain-Driven Design, distributed systems, production RAG architecture, agentic systems, and technical architecture advisory.",
+    "serviceType": ["Software Architecture Consulting", "AI Systems Consulting", "Domain-Driven Design Consulting", "Technical Architecture Advisory"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../lib/styles.css" />
+
+  <style>
+    /* ============================================================
+       Consulting page — additional styles
+       ============================================================ */
+
+    /* Keep Consulting nav link visually active regardless of scroll state */
+    .nav-consulting {
+      color: var(--ink) !important;
+      position: relative;
+    }
+    .nav-consulting::after {
+      content: "";
+      position: absolute;
+      left: 14px; right: 14px;
+      bottom: 3px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    /* ---- Hero ---- */
+    .consulting-hero {
+      padding-top: clamp(110px, 16vh, 180px);
+      padding-bottom: clamp(70px, 11vh, 130px);
+      text-align: center;
+    }
+    .consulting-hero .eyebrow { justify-content: center; margin-bottom: 28px; }
+    .consulting-hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      max-width: 16ch;
+      margin: 0 auto;
+    }
+    .consulting-hero h1 .grad {
+      background: linear-gradient(110deg, var(--ink) 5%, var(--accent-soft) 50%, var(--ink) 95%);
+      background-size: 220% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textshine calc(8s / max(var(--motion), 0.15)) linear infinite;
+    }
+    .consulting-hero .hero-lead {
+      max-width: 52ch;
+      margin: 28px auto 0;
+      font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+    }
+    .consulting-hero .hero-cta { justify-content: center; margin-top: 38px; }
+
+    /* ---- Focus areas ---- */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 52px;
+    }
+    .focus-card {
+      padding: 28px 28px 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: linear-gradient(180deg, rgba(14,30,49,0.6), rgba(9,21,35,0.45));
+      transition: border-color .4s ease, transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .focus-card::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(120% 110% at 0% 0%, rgba(37,99,235,0.14), transparent 55%);
+      opacity: 0;
+      transition: opacity .4s ease;
+    }
+    .focus-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 20px 50px -28px var(--accent-glow); }
+    .focus-card:hover::before { opacity: 1; }
+    .focus-n {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--accent-soft);
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .focus-card h3 { font-size: 1.1rem; letter-spacing: -0.02em; position: relative; }
+    .focus-card p { margin-top: 12px; color: var(--ink-3); font-size: 0.93rem; line-height: 1.55; position: relative; }
+
+    /* ---- Form section ---- */
+    .form-section-lead { margin-top: 18px; max-width: 52ch; color: var(--ink-2); font-size: 1.05rem; }
+
+    .form-wrap {
+      margin-top: 52px;
+      max-width: 820px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-group label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      letter-spacing: -0.01em;
+    }
+    .req { color: var(--accent-soft); margin-left: 2px; }
+
+    .form-control {
+      background: rgba(10, 23, 38, 0.7);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-sm);
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      padding: 11px 15px;
+      width: 100%;
+      transition: border-color .25s ease, box-shadow .25s ease, background .25s ease;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+      background: rgba(14, 30, 49, 0.85);
+    }
+    .form-control.invalid {
+      border-color: #EF4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+    }
+    .form-control::placeholder { color: var(--ink-faint); }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
+    .select-wrap { position: relative; }
+    .select-wrap .form-control { padding-right: 38px; cursor: pointer; }
+    .select-arrow {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: var(--ink-3);
+    }
+
+    /* Radio pills */
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .radio-opt { position: relative; }
+    .radio-opt input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0; height: 0;
+    }
+    .radio-opt label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      padding: 9px 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: border-color .2s ease, color .2s ease, background .2s ease;
+      user-select: none;
+    }
+    .radio-opt label:hover {
+      color: var(--ink);
+      border-color: rgba(148,175,214,0.34);
+      background: rgba(255,255,255,0.03);
+    }
+    .radio-opt input[type="radio"]:checked + label {
+      border-color: var(--accent);
+      background: rgba(37, 99, 235, 0.12);
+      color: var(--ink);
+    }
+    .radio-opt input[type="radio"]:focus-visible + label {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* Honeypot — off-screen, not display:none (bots check that) */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      opacity: 0;
+      pointer-events: none;
+      width: 1px;
+      height: 1px;
+    }
+
+    /* Form actions */
+    .form-actions {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .form-note {
+      font-size: 0.82rem;
+      color: var(--ink-3);
+    }
+
+    /* Submit button loading state */
+    #submitBtn[data-state="loading"] {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    #submitBtn[data-state="loading"] .arr { display: none; }
+    .btn-spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin-btn .7s linear infinite;
+      display: none;
+    }
+    #submitBtn[data-state="loading"] .btn-spinner { display: inline-block; }
+    @keyframes spin-btn { to { transform: rotate(360deg); } }
+
+    /* Success / Error states */
+    .form-error {
+      margin-top: 20px;
+      padding: 16px 20px;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: var(--r-md);
+      background: rgba(239, 68, 68, 0.08);
+      color: #FCA5A5;
+      font-size: 0.93rem;
+    }
+    .form-error a { color: #FCA5A5; text-decoration: underline; }
+    .form-success {
+      padding: clamp(40px, 6vw, 72px) clamp(28px, 5vw, 56px);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-xl);
+      background: linear-gradient(180deg, rgba(14,30,49,0.7), rgba(9,21,35,0.5));
+      text-align: center;
+    }
+    .success-icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent-soft);
+      margin: 0 auto 24px;
+      box-shadow: 0 0 28px -8px var(--accent-glow);
+    }
+    .form-success h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); letter-spacing: -0.03em; }
+    .form-success p { margin-top: 14px; color: var(--ink-2); font-size: 1.05rem; max-width: 44ch; margin-left: auto; margin-right: auto; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 640px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-field" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true" role="presentation"></canvas>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="/">
+      <span class="mark">A</span>
+      <span>Alireza Rahmani Khalili<small>&nbsp;· eng</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="/#home">Home</a>
+      <a href="/#architecture">Architecture</a>
+      <a href="/#writing">Writing</a>
+      <a href="/consulting/" class="nav-consulting">Consulting</a>
+      <a href="/#about">About</a>
+    </div>
+    <a class="nav-social" href="https://www.linkedin.com/in/rahmanikhalili/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.2 8h4.6v13H.2V8zm7.5 0h4.4v1.78h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3 5.42 6.92V21h-4.6v-6.12c0-1.46-.02-3.34-2.04-3.34-2.04 0-2.35 1.6-2.35 3.24V21h-4.6V8z"/></svg>
+    </a>
+    <a class="nav-cta" href="#request">Request a consultation</a>
+    <button class="nav-burger" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="top" class="section-pad consulting-hero" aria-label="Consulting introduction">
+    <div class="wrap">
+      <div class="eyebrow reveal">Consulting · Software Architecture &amp; AI Systems</div>
+      <h1 class="reveal" data-d="1">
+        <span class="grad">Software Architecture &amp; AI Systems Consulting</span>
+      </h1>
+      <p class="hero-lead reveal" data-d="2">I help engineering teams reason about complex architecture decisions, expose hidden trade-offs, and design systems that survive production.</p>
+      <div class="hero-cta reveal" data-d="3">
+        <a class="btn btn-primary" href="#request">
+          Request a Consultation
+          <svg class="arr" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="/">Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOCUS AREAS ===================== -->
+  <section id="focus" class="section-pad" aria-label="Consulting focus areas">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Focus Areas</div>
+        <h2 class="section-title">Where I can help.</h2>
+        <p class="section-lead">Engagements where architecture decisions carry real risk and getting them wrong has lasting consequences.</p>
+      </div>
+
+      <div class="focus-grid">
+        <div class="focus-card reveal">
+          <div class="focus-n">01 · Architecture Reviews</div>
+          <h3>Architecture Reviews</h3>
+          <p>Systematic evaluation of your current system — identifying hidden risks, accidental coupling, scalability limits, and structural decisions that will constrain you before they become production incidents.</p>
+        </div>
+
+        <div class="focus-card reveal" data-d="1">
+          <div class="focus-n">02 · DDD / Distributed Systems</div>
+          <h3>Distributed Systems &amp; DDD</h3>
+          <p>Designing or rethinking distributed systems using Domain-Driven Design — bounded contexts, context mapping, event-driven integration patterns, and consistency trade-offs that align the software with how the business actually works.</p>
+        </div>
+
+        <div class="focus-card reveal" data-d="2">
+          <div class="focus-n">03 · Production AI / RAG</div>
+          <h3>Production AI / RAG Architecture</h3>
+          <p>Building RAG and AI systems that work outside demos — retrieval infrastructure, evaluation pipelines, grounding strategies, latency budgets, and the operational engineering required for reliability at scale.</p>
+        </div>
+
+        <div class="focus-card reveal" data-d="3">
+          <div class="focus-n">04 · Agentic Systems</div>
+          <h3>Agentic Systems</h3>
+          <p>Designing agentic workflows with explicit system boundaries, orchestration patterns, tool integration surfaces, evaluation loops, and production safeguards. Agentic AI is a distributed systems problem. Treat it like one.</p>
+        </div>
+
+        <div class="focus-card reveal" data-d="4">
+          <div class="focus-n">05 · Technical Advisory</div>
+          <h3>Technical Architecture Advisory</h3>
+          <p>Ongoing principal-level advisory — helping engineering leadership reason through system design decisions, technology choices, and architectural trade-offs as they arise across the organisation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONSULTATION FORM ===================== -->
+  <section id="request" class="section-pad" aria-label="Request a consultation">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Consultation Request</div>
+        <h2 class="section-title">Tell me what you're building.</h2>
+        <p class="form-section-lead">I review every request personally. If there's a good fit I'll reach out to discuss scope and next steps.</p>
+      </div>
+
+      <div class="form-wrap">
+        <form id="consultingForm" novalidate aria-label="Consultation request form">
+          <!-- Honeypot: hidden from humans, bots fill this → reject submission server-side -->
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-grid reveal" data-d="1">
+
+            <!-- Name -->
+            <div class="form-group">
+              <label for="f-name">Name <span class="req" aria-label="required">*</span></label>
+              <input
+                type="text"
+                id="f-name"
+                name="name"
+                class="form-control"
+                required
+                maxlength="100"
+                autocomplete="name"
+                placeholder="Your name"
+              />
+            </div>
+
+            <!-- Work Email -->
+            <div class="form-group">
+              <label for="f-email">Work Email <span class="req" aria-label="required">*</span></label>
+              <input
+                type="email"
+                id="f-email"
+                name="email"
+                class="form-control"
+                required
+                maxlength="254"
+                autocomplete="email"
+                placeholder="you@company.com"
+              />
+            </div>
+
+            <!-- Company -->
+            <div class="form-group">
+              <label for="f-company">Company</label>
+              <input
+                type="text"
+                id="f-company"
+                name="company"
+                class="form-control"
+                maxlength="120"
+                autocomplete="organization"
+                placeholder="Company or organisation name"
+              />
+            </div>
+
+            <!-- Role -->
+            <div class="form-group">
+              <label for="f-role">Role</label>
+              <input
+                type="text"
+                id="f-role"
+                name="role"
+                class="form-control"
+                maxlength="120"
+                autocomplete="organization-title"
+                placeholder="Your role or title"
+              />
+            </div>
+
+            <!-- What are you building -->
+            <div class="form-group full">
+              <label for="f-building">What are you building? <span class="req" aria-label="required">*</span></label>
+              <textarea
+                id="f-building"
+                name="building"
+                class="form-control"
+                required
+                maxlength="3000"
+                rows="4"
+                placeholder="Describe what you're building or working on — the system, the team size, the stage of development…"
+              ></textarea>
+            </div>
+
+            <!-- Architecture problem -->
+            <div class="form-group full">
+              <label for="f-problem">What architecture problem are you trying to solve? <span class="req" aria-label="required">*</span></label>
+              <textarea
+                id="f-problem"
+                name="problem"
+                class="form-control"
+                required
+                maxlength="3000"
+                rows="4"
+                placeholder="Describe the architectural challenge, trade-off, or decision you're facing. The more specific, the better."
+              ></textarea>
+            </div>
+
+            <!-- Engagement type -->
+            <div class="form-group full">
+              <label id="engagement-label">Engagement type</label>
+              <div class="radio-group" role="group" aria-labelledby="engagement-label">
+                <div class="radio-opt">
+                  <input type="radio" id="e-arch" name="engagement" value="Architecture Review" />
+                  <label for="e-arch">Architecture Review</label>
+                </div>
+                <div class="radio-opt">
+                  <input type="radio" id="e-ddd" name="engagement" value="DDD / Distributed Systems" />
+                  <label for="e-ddd">DDD / Distributed Systems</label>
+                </div>
+                <div class="radio-opt">
+                  <input type="radio" id="e-rag" name="engagement" value="Production AI / RAG" />
+                  <label for="e-rag">Production AI / RAG</label>
+                </div>
+                <div class="radio-opt">
+                  <input type="radio" id="e-agent" name="engagement" value="Agentic Systems" />
+                  <label for="e-agent">Agentic Systems</label>
+                </div>
+                <div class="radio-opt">
+                  <input type="radio" id="e-advisory" name="engagement" value="Technical Advisory" />
+                  <label for="e-advisory">Technical Advisory</label>
+                </div>
+                <div class="radio-opt">
+                  <input type="radio" id="e-other" name="engagement" value="Other" />
+                  <label for="e-other">Other</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Budget range -->
+            <div class="form-group">
+              <label for="f-budget">Budget range</label>
+              <div class="select-wrap">
+                <select id="f-budget" name="budget" class="form-control">
+                  <option value="">Select a range (optional)</option>
+                  <option value="under-5k">Under $5k</option>
+                  <option value="5k-15k">$5k – $15k</option>
+                  <option value="15k-30k">$15k – $30k</option>
+                  <option value="30k-plus">$30k+</option>
+                  <option value="not-defined">Not yet defined</option>
+                </select>
+                <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <!-- LinkedIn or company URL -->
+            <div class="form-group">
+              <label for="f-url">LinkedIn or company URL</label>
+              <input
+                type="text"
+                id="f-url"
+                name="url"
+                class="form-control"
+                maxlength="300"
+                placeholder="linkedin.com/in/… or company.com"
+              />
+            </div>
+
+          </div><!-- /form-grid -->
+
+          <div class="form-actions reveal" data-d="2">
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              <span class="btn-text">Send Consultation Request</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+              <svg class="arr" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="form-note">Fields marked * are required. I review every request personally.</p>
+          </div>
+
+          <div id="formError" class="form-error" hidden role="alert" aria-live="polite">
+            Something went wrong sending your request. Please try again — or reach out directly at
+            <a href="mailto:hello@alireza.engineer">hello@alireza.engineer</a>.
+          </div>
+
+        </form>
+
+        <div id="formSuccess" class="form-success" hidden tabindex="-1" aria-live="polite">
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h3>Thanks. Your request has been received.</h3>
+          <p>I'll review the context and get back to you if there's a good fit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Alireza Rahmani Khalili · Principal Software Engineer</span>
+      <span class="mono" style="margin:0">Built for the AI era · DDD × Distributed × GenAI</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <script>
+  /* ============================================================
+     Consultation form — AJAX submission via Formspree
+     Security: honeypot, length limits, email validation, duplicate
+     submission prevention, confirmed-success-only display.
+     ============================================================ */
+  (function () {
+    "use strict";
+
+    /* Replace this value with your Formspree form ID after setup.
+       See: https://formspree.io — create account → new form → copy ID.
+       The form ID is designed to be public; it is NOT a secret. */
+    var ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID";
+
+    var form      = document.getElementById("consultingForm");
+    var submitBtn = document.getElementById("submitBtn");
+    var errorEl   = document.getElementById("formError");
+    var successEl = document.getElementById("formSuccess");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      /* Honeypot: if a bot filled this hidden field, silently drop */
+      var hp = form.querySelector("[name='_gotcha']");
+      if (hp && hp.value) return;
+
+      /* Prevent concurrent duplicate submissions */
+      if (submitBtn.dataset.state === "loading") return;
+
+      /* Clear prior invalid states */
+      form.querySelectorAll(".form-control.invalid").forEach(function (el) {
+        el.classList.remove("invalid");
+      });
+
+      /* HTML5 constraint validation */
+      if (!form.checkValidity()) {
+        var first = null;
+        form.querySelectorAll(".form-control").forEach(function (el) {
+          if (!el.validity.valid) {
+            el.classList.add("invalid");
+            if (!first) first = el;
+          }
+        });
+        if (first) {
+          first.focus();
+          first.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        return;
+      }
+
+      /* Set loading state */
+      submitBtn.dataset.state = "loading";
+      submitBtn.disabled = true;
+      errorEl.hidden = true;
+
+      var body = new FormData(form);
+
+      fetch(ENDPOINT, {
+        method: "POST",
+        body: body,
+        headers: { Accept: "application/json" }
+      })
+        .then(function (resp) {
+          return resp.json().then(function (data) {
+            return { ok: resp.ok, data: data };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok) {
+            var msg = (result.data && result.data.error) ? result.data.error : ("HTTP " + result.status);
+            throw new Error(msg);
+          }
+          /* Confirmed server-side acceptance — show success */
+          form.hidden = true;
+          successEl.hidden = false;
+          successEl.focus();
+          successEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        })
+        .catch(function () {
+          /* Show error, re-enable button, preserve all form data */
+          errorEl.hidden = false;
+          submitBtn.dataset.state = "";
+          submitBtn.disabled = false;
+          errorEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        });
+    });
+
+    /* Remove invalid state on input correction */
+    form.querySelectorAll(".form-control").forEach(function (el) {
+      el.addEventListener("input", function () {
+        if (el.validity.valid) el.classList.remove("invalid");
+      });
+    });
+
+  })();
+  </script>
+
+  <script src="../lib/site.js"></script>
+</body>
+</html>
