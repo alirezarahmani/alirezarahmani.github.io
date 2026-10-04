@@ -349,7 +349,7 @@ section { position: relative; }
 .portrait-ring {
   position: relative;
   width: clamp(280px, 32vw, 420px);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 9 / 10;
   border-radius: var(--r-xl);
   padding: 1px;
   background: linear-gradient(160deg, rgba(148,175,214,0.4), transparent 40%, rgba(37,99,235,0.5));
@@ -368,6 +368,9 @@ section { position: relative; }
   border-radius: calc(var(--r-xl) - 1px);
   overflow: hidden;
   object-fit: cover;
+}
+.portrait-ring img.portrait {
+  object-position: center 90%;
 }
 .portrait-placeholder {
   background: linear-gradient(160deg, rgba(20,40,65,0.9) 0%, rgba(14,30,50,0.95) 60%, rgba(10,20,38,1) 100%);
