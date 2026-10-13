@@ -12,8 +12,8 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="application-name" content="Alireza Rahmani Khalili" />
-  <meta name="theme-color" content="#07111F" />
-  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="color-scheme" content="light" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="canonical" href="https://alireza.engineer/" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://alireza.engineer/sitemap.xml" />
@@ -190,9 +190,10 @@
   }
   </script>
 
+  <link rel="preload" as="image" href="hero.png" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="lib/styles.css" />
 </head>
 <body>
@@ -204,7 +205,7 @@
   <nav class="nav" aria-label="Primary">
     <a class="brand" href="#home">
       <span class="mark">A</span>
-      <span>Alireza Rahmani Khalili<small>&nbsp;· eng</small></span>
+      <span><span class="brand-name">Alireza</span><span class="brand-tld">.engineer</span></span>
     </a>
     <div class="nav-links">
       <a href="#home" class="active">Home</a>
@@ -228,14 +229,20 @@
   <section id="home" class="hero wrap" aria-label="Introduction">
     <div class="hero-grid">
       <div class="hero-text">
-        <h1 class="reveal" data-d="1" style="width: 570px; max-width: 100%;">
-          <span class="grad" style="font-size: 70px;">Alireza Rahmani Khalili</span>
+        <p class="hero-identity reveal" data-d="1">
+          <span class="dot"></span>
+          Alireza Rahmani Khalili
+        </p>
+        <h1 class="reveal" data-d="2">
+          <span class="hero-l1">Software Architecture</span>
+          <span class="hero-l2">that holds.</span>
+          <span class="hero-subhead">As AI accelerates.</span>
         </h1>
-        <div class="rotator reveal" data-d="2">
+        <div class="rotator reveal" data-d="3">
           <span class="label">Principal Software Engineer · building</span>
           <div class="rotator-track" data-items='["domain-driven systems","distributed architecture","event-driven platforms","production-grade AI","RAG &amp; retrieval systems","AI-native infrastructure"]'></div>
         </div>
-        <p class="hero-lead reveal" data-d="3">I help engineering teams design scalable distributed systems, untangle architecture bottlenecks, and introduce AI into production without creating operational chaos. My work spans Domain-Driven Design, event-driven platforms, high-throughput data systems, and production AI.</p>
+        <p class="hero-lead reveal" data-d="4">I help engineering teams design scalable distributed systems, untangle architecture bottlenecks, and introduce AI into production without creating operational chaos. My work spans Domain-Driven Design, event-driven platforms, high-throughput data systems, and production AI.</p>
         <div class="hero-cta reveal" data-d="4">
           <a class="btn btn-primary" href="consulting/">
             Book a Consulting Call
@@ -246,7 +253,7 @@
           </a>
         </div>
         <p class="reveal" data-d="4" style="font-size:0.82rem; color:var(--ink-3); margin-top:10px; letter-spacing:0.01em;">Architecture reviews · System design · AI platform strategy</p>
-        <div class="badges reveal" data-d="5">
+        <div class="badges reveal" data-d="4">
           <span class="badge"><i></i>Architecture Consulting</span>
           <span class="badge"><i></i>Distributed Systems</span>
           <span class="badge"><i></i>DDD &amp; Platform Design</span>
@@ -256,7 +263,10 @@
 
       <div class="portrait-wrap reveal" data-d="3">
         <div class="portrait-ring">
-          <img class="portrait" src="hero.png" alt="Alireza Rahmani Khalili — Principal Software Engineer"
+          <img class="portrait" src="hero.png"
+            alt="Alireza Rahmani Khalili, Principal Software Engineer and Software Architect"
+            width="1018" height="1544"
+            fetchpriority="high" loading="eager"
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
           <div class="portrait-placeholder" style="display:none;">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
@@ -336,7 +346,7 @@
         <div class="node big reveal" data-d="1"><span class="n-dot"></span><div class="n-ix">// retrieval</div><h4>Vector Infrastructure</h4><div class="n-desc">Embedding stores and indexing strategies tuned for recall, freshness, and throughput at scale.</div></div>
       </div>
 
-      <div class="arch-consult-cta reveal" style="margin-top:48px; padding:28px 32px; border:1px solid var(--line-strong); border-radius:var(--r-lg); background:linear-gradient(120deg, rgba(37,99,235,0.08), rgba(14,30,49,0.4)); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+      <div class="arch-consult-cta reveal" style="margin-top:48px; padding:28px 32px; border:1.5px solid var(--line-strong); border-radius:var(--r-lg); background:var(--bg-2); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;">
         <div>
           <div style="font-family:var(--mono); font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent-soft); margin-bottom:10px;">Architecture &amp; AI Consulting</div>
           <p style="margin:0; color:var(--ink-2); max-width:52ch; font-size:1rem;">Working through a system design decision in one of these areas? I review architecture problems and help teams find the right trade-offs.</p>
@@ -396,8 +406,8 @@
           <p>A deep dive into aggregates, consistency boundaries, transactional modeling, and the role aggregates play in maintainable domain models.</p>
           <div class="foot"><span>Domain-Driven Design</span><span class="read">Read<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
         </a>
-        <article class="article reveal" data-d="2" style="background:linear-gradient(140deg, rgba(37,99,235,0.14), rgba(9,21,35,0.45)); border-color: var(--line-strong);">
-          <span class="src" style="color:var(--ink)"><i style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block"></i>All writing</span>
+        <article class="article reveal" data-d="2" style="background:var(--bg-3); border-color:var(--accent); border-width:1.5px;">
+          <span class="src"><i style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block"></i>All writing</span>
           <h3 style="margin-top:auto">Explore all articles on DZone &amp; Substack →</h3>
           <p>Technical writing covering software architecture, Domain-Driven Design, distributed systems, production AI, RAG, and AI-native systems.</p>
           <div class="foot" style="gap:18px">

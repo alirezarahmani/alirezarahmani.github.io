@@ -41,7 +41,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../lib/styles.css" />
 
   <style>
@@ -80,11 +80,11 @@
       margin: 0 auto;
     }
     .consulting-hero h1 .grad {
-      background: linear-gradient(110deg, var(--ink) 5%, var(--accent-soft) 50%, var(--ink) 95%);
-      background-size: 220% auto;
-      -webkit-background-clip: text; background-clip: text;
+      background: linear-gradient(110deg, #071547 0%, #143675 55%, #2856A0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: textshine calc(8s / max(var(--motion), 0.15)) linear infinite;
+      animation: none;
     }
     .consulting-hero .hero-lead {
       max-width: 52ch;
@@ -102,9 +102,9 @@
     }
     .focus-card {
       padding: 28px 28px 30px;
-      border: 1px solid var(--line);
+      border: 1.5px solid var(--line);
       border-radius: var(--r-lg);
-      background: linear-gradient(180deg, rgba(14,30,49,0.6), rgba(9,21,35,0.45));
+      background: var(--bg);
       transition: border-color .4s ease, transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;
       position: relative;
       overflow: hidden;
@@ -112,11 +112,11 @@
     .focus-card::before {
       content: "";
       position: absolute; inset: 0;
-      background: radial-gradient(120% 110% at 0% 0%, rgba(37,99,235,0.14), transparent 55%);
+      background: radial-gradient(120% 110% at 0% 0%, rgba(37,99,235,0.06), transparent 55%);
       opacity: 0;
       transition: opacity .4s ease;
     }
-    .focus-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 20px 50px -28px var(--accent-glow); }
+    .focus-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 36px -18px var(--accent-glow); }
     .focus-card:hover::before { opacity: 1; }
     .focus-n {
       font-family: var(--mono);
@@ -157,8 +157,8 @@
     .req { color: var(--accent-soft); margin-left: 2px; }
 
     .form-control {
-      background: rgba(10, 23, 38, 0.7);
-      border: 1px solid var(--line-strong);
+      background: var(--bg);
+      border: 1.5px solid var(--line-strong);
       border-radius: var(--r-sm);
       color: var(--ink);
       font-family: var(--font);
@@ -172,8 +172,8 @@
     }
     .form-control:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
-      background: rgba(14, 30, 49, 0.85);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+      background: var(--bg);
     }
     .form-control.invalid {
       border-color: #EF4444;
@@ -224,8 +224,8 @@
     }
     .radio-opt label:hover {
       color: var(--ink);
-      border-color: rgba(148,175,214,0.34);
-      background: rgba(255,255,255,0.03);
+      border-color: var(--accent);
+      background: rgba(37,99,235,0.04);
     }
     .radio-opt input[type="radio"]:checked + label {
       border-color: var(--accent);
@@ -282,18 +282,18 @@
     .form-error {
       margin-top: 20px;
       padding: 16px 20px;
-      border: 1px solid rgba(239, 68, 68, 0.35);
+      border: 1.5px solid rgba(239, 68, 68, 0.4);
       border-radius: var(--r-md);
-      background: rgba(239, 68, 68, 0.08);
-      color: #FCA5A5;
+      background: rgba(239, 68, 68, 0.06);
+      color: #B91C1C;
       font-size: 0.93rem;
     }
-    .form-error a { color: #FCA5A5; text-decoration: underline; }
+    .form-error a { color: #B91C1C; text-decoration: underline; }
     .form-success {
       padding: clamp(40px, 6vw, 72px) clamp(28px, 5vw, 56px);
-      border: 1px solid var(--line-strong);
+      border: 1.5px solid var(--line-strong);
       border-radius: var(--r-xl);
-      background: linear-gradient(180deg, rgba(14,30,49,0.7), rgba(9,21,35,0.5));
+      background: var(--bg-2);
       text-align: center;
     }
     .success-icon {
@@ -326,7 +326,7 @@
   <nav class="nav" aria-label="Primary">
     <a class="brand" href="/">
       <span class="mark">A</span>
-      <span>Alireza Rahmani Khalili<small>&nbsp;· eng</small></span>
+      <span><span class="brand-name">Alireza</span><span class="brand-tld">.engineer</span></span>
     </a>
     <div class="nav-links">
       <a href="/#home">Home</a>
