@@ -190,7 +190,7 @@
   }
   </script>
 
-  <link rel="preload" as="image" href="hero.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="hero.webp" fetchpriority="high" type="image/webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -263,11 +263,14 @@
 
       <div class="portrait-wrap reveal" data-d="3">
         <div class="portrait-ring">
-          <img class="portrait" src="hero.png"
-            alt="Alireza Rahmani Khalili, Principal Software Engineer and Software Architect"
-            width="1018" height="1544"
-            fetchpriority="high" loading="eager"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <picture>
+            <source srcset="hero.webp" type="image/webp" />
+            <img class="portrait" src="hero-fallback.jpg"
+              alt="Alireza Rahmani Khalili, Principal Software Engineer and Software Architect"
+              width="840" height="1273"
+              fetchpriority="high" loading="eager"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          </picture>
           <div class="portrait-placeholder" style="display:none;">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
             <span>hero.png</span>
